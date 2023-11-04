@@ -110,6 +110,7 @@ button {
 .image-container {
   background-image: url("./images/image-product-desktop.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .image-container.mobile {
@@ -144,17 +145,34 @@ button {
 
 @media screen and (max-width: 375px) {
   body {
-    padding: 1rem;
+    padding: 0.75rem;
+  }
+
+  h1,
+  h2,
+  p {
+    margin-bottom: 0.75rem;
+  }
+
+  h2,
+  span.price {
+    font-size: 2rem;
   }
 
   .container {
     width: 100%;
     flex-direction: column;
+    /* margin: 0; */
   }
 
   .image-container,
   .product-details {
     width: 100%;
+  }
+
+  .image-container.mobile {
+    display: block;
+    height: calc(var(--main-height) * (2 / 3));
   }
 
   .image-container.desktop {
